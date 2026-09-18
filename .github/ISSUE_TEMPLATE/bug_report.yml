@@ -1,0 +1,45 @@
+name: 오류 제보
+description: KFPL PC판에서 발생한 문제를 알려주세요.
+title: "[오류] "
+body:
+  - type: input
+    id: version
+    attributes:
+      label: 게임 버전
+      placeholder: "예: PC 0.1.0 테스트판"
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows 버전
+      placeholder: "예: Windows 11 64비트"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 발생 순서
+      description: 오류 직전 어떤 행동을 했는지 순서대로 적어주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 실제 결과와 오류 문구
+      description: 스크린샷에 개인 정보가 있다면 가려주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 기대한 결과
+  - type: dropdown
+    id: save_type
+    attributes:
+      label: 커리어 종류
+      options:
+        - PC에서 새로 만든 커리어
+        - 웹 백업을 가져온 커리어
+        - PC 백업을 복원한 커리어
+        - 해당 없음
